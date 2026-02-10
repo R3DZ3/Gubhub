@@ -1,0 +1,58 @@
+/*Animation*/
+@keyframes colourchange {
+  0% {
+    color: rgb(174, 0, 255);
+  }
+  25% {
+    color: rgb(111, 0, 255);
+  }
+  50% {
+    color: rgb(0, 26, 255);
+  }
+  75% {
+    color: rgb(111, 0, 255);
+  }
+  100%{
+    color: rgb(174, 0, 255);
+  }
+}
+
+.animate-element {
+  animation: colourchange 1s forwards; /* 'forwards' ensures the element stays at the end state */
+}
+
+/*Style*/
+body{
+    background-color: rgb(49, 49, 49);
+}
+header{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0px 50px;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    &:hover{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        animation: colourchange 2s infinite;
+        transition: 0.1s ;
+    }
+}
+.banner img{
+  width: 100%;
+  height: 10px;
+  opacity: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header:hover .banner img{
+    opacity: 1;
+    width: 100%;
+    height: 350px;
+    transition: ease-in-out,0.5s;
+}
